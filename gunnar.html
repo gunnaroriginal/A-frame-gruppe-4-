@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gunnar</title>
+    <meta
+      name="description"
+      content="Rotating camera around a 3D model using A-Frame"
+    />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene style="width: 100%; height: 100%" scale="1 1 1.5">
+      <a-entity-assets>
+        <a-asset-item id="gunnar" src="https://cdn.glitch.global/3c1ae3a9-a5bb-4f57-a241-63a7461d41cf/player.glb?v=1706097808991"></a-asset-item>
+      </a-entity-assets>
+
+      <!-- Add animation-mixer component to play glTF animations -->
+      <a-entity
+        gltf-model="#gunnar"
+        position="0 1.1 -0.7"
+        scale="0.3 0.3 0.3"
+        rotation="0 180 0"
+        animation-mixer
+      ></a-entity>
+
+      <a-text
+        value="Gunnar"
+        color="black"
+        position="0 2.1 -0.7"
+        align="center"
+      ></a-text>
+      <a-text
+        value="Gunnar"
+        color="black"
+        position="0 2.1 -0.7"
+        align="center"
+        rotation="0 180 0"
+      ></a-text>
+    </a-scene>
+  </body>
+</html>
